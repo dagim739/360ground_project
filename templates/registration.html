@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <script src="{% static 'js/_360groundproject.js' %}"></script>
+</head>
+<body>
+    <div id="registration-container">
+        <form action="" method="POST" id="registrationform">
+            {% csrf_token %}
+            <div id="firstnamecontainer" class="name-container">
+                <label for="firstname">First name: </label>
+                <input id="firstname" type="text" name="firstname" maxlength="20" value="{{data.firstname}}">
+                <p class="regerror">{{data.firstnameerror}}</p>
+            </div>
+            <div id="lastnamecontainer" class="name-container">
+                <label for="lastname">Last name: </label>
+                <input id="lastname" type="text" name="lastname" maxlength="20" value="{{data.lastname}}">
+                <p class="regerror">{{data.lastnameerror}}</p>
+            </div>
+            <div id="username-container">
+                <label for="username">Username: </label>
+                <input id="username" type="text" name="username" maxlength="50" value="{{data.username}}">
+                <p class="regerror">{{data.usernameerror}}</p>
+            </div>
+            <div id="password-container">
+                <label for="password">Password: </label>
+                <input id="password" type="password" name="password" maxlength="50" value="{{data.password}}">
+                <p class="regerror">{{data.passworderror}}</p>
+            </div>
+            <div id="email-container">
+                <label for="email">Email: </label>
+                <input id="email" type="email" name="email" value="{{data.email}}">
+                <p class="regerror">{{data.emailerror}}</p>
+            </div>
+            <input type="submit" value="Register" id="register">
+        </form>
+    </div>
+</body>
+</html>

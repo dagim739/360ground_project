@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 Et.Calendar</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/_360groundproject.js' %}"></script>
+</head>
+<body id="thebody">
+    <div id="sidebar">
+        <div id="clinic-name">
+            <h1>360 Et.Calendar</h1>
+        </div>
+        <div id="sidebar-navigation">
+            <ul>
+                <li><a href="#" hx-target="#content" hx-trigger="click" hx-swap="innerHTML" hx-get="{% url 'dashboard' %}"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+                <li><a href="#" hx-target="#content" hx-trigger="click" hx-swap="innerHTML" hx-get="{% url 'profile' %}"><i class='bx bxs-user' ></i>Profile</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div id="dashboard-container">
+            <div id="add_event_btn_container">
+                <button id="event_adding_button" hx-get="{% url 'addevents' %}" hx-target="#dashboard-container" hx-trigger="click" hx-swap="innerHTML">Add Events</button>
+            </div>
+
+
+
+            <div id="events_container">
+                {% for event in allevents %}
+                    <div id="events" class="events">
+                        <p>Event name: {{ event.event_name }}</p>
+                        <p>Creation date: {{ event.date_of_creation }}</p>
+                        <p>Status: {{ event.status }}</p>
+                        <p>Recurrence: {{ event.recurrence }}</p>
+                        <p>Due date: {{ event.due_date }}</p>
+                        <div class="event-actions">
+                            <form hx-get="{% url 'editevent' %}" hx-target="#content" hx-swap="innerHTML">
+                                <input type="hidden" name="id" value="{{ event.id }}">
+                                <button class="edit-btn">✏️</button>
+                            </form>
+                            <form hx-get="{% url 'deleteevent' %}" hx-target="#content" hx-swap="innerHTML">
+                                <input type="hidden" name="id" value="{{ event.id }}">
+                                <button class="delete-btn">🗑️</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

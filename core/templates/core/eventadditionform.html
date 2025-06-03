@@ -1,0 +1,63 @@
+<div id="event_addition_form_container">
+    <form id="choosing-form">
+        <div>
+            <label>
+                <input type="radio" name="eventtype" value="onetime" checked
+                    hx-get="{% url 'changeform' %}" 
+                    hx-trigger="change"
+                    hx-target="#event_form_container"
+                    hx-swap="innerHTML">
+                One time event
+            </label><br>
+        </div>
+
+        <div>
+            <label>
+                <input type="radio" name="eventtype" value="recurring"
+                    hx-get="{% url 'changeform' %}"
+                    hx-trigger="change"
+                    hx-target="#event_form_container"
+                    hx-swap="innerHTML">
+                Recurring event
+            </label><br>
+        </div>
+    </form>
+
+<div id="event_form_container">
+    <div id="one_time_event_form_container">
+    <p id="onetimeeventheader">One time event</p>
+        <form hx-post="{% url 'addevents' %}" hx-swap="outerHTML" hx-target="#one_time_event_form_container" >
+            {% csrf_token %}
+            <input type="hidden" name="eventtype" value="onetime">
+            <div id="eventnamecontainer">
+                <input type="text" id="eventname" placeholder="Event name" maxlength="50" name="eventname" value="{{error.eventname}}">
+                <input type="date" id="dateinput" name="eventdate" value="{{error.eventdate}}" required>
+                <p id="event-name-error">{{error.eventnameordate}}</p>
+            </div>
+
+            <div id="event-status-container">
+                <p id="event-status">Event status</p>
+                <div id="choosing-form">
+                    <div>
+                        <label>
+                            <input type="radio" name="eventstatus" value="tentative" checked>
+                            Tentative
+                        </label><br>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="eventstatus" value="confirmed">
+                            Confirmed
+                        </label><br>
+                    </div>
+                </div>       
+            </div>
+
+            <div id="event-description-container">
+                <textarea name="event-description" id="event-description" placeholder="Event description"></textarea>
+            </div>
+            <input type="submit" value="Add event" id="addeventpost">
+        </form>        
+    </div>
+</div>

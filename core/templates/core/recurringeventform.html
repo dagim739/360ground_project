@@ -1,0 +1,52 @@
+<div id="recurring_event_form_container">
+    <div id="recurrence_type_container">
+        <form id="recurrence-choosing-form">
+            <div>
+                <label>
+                    <input type="radio" name="recurrencetype" value="standard_recurrence" checked
+                        hx-get="{% url 'changerecurrenceform' %}" 
+                        hx-trigger="change"
+                        hx-target="#single_recurrence_container"
+                        hx-swap="innerHTML">
+                    Standard_recurrence
+                </label><br>
+            </div>
+
+            <div>
+                <label>
+                    <input type="radio" name="recurrencetype" value="interval_patterns"
+                        hx-get="{% url 'changerecurrenceform' %}"
+                        hx-trigger="change"
+                        hx-target="#single_recurrence_container"
+                        hx-swap="innerHTML">
+                    interval_patterns
+                </label><br>
+            </div>
+
+            <div>
+                <label>
+                    <input type="radio" name="recurrencetype" value="weekdays"
+                        hx-get="{% url 'changerecurrenceform' %}"
+                        hx-trigger="change"
+                        hx-target="#single_recurrence_container"
+                        hx-swap="innerHTML">
+                    Weekdays
+                </label><br>
+            </div>
+
+            <div>
+                <label>
+                    <input type="radio" name="recurrencetype" value="relative_date_pattern"
+                        hx-get="{% url 'changerecurrenceform' %}"
+                        hx-trigger="change"
+                        hx-target="#single_recurrence_container"
+                        hx-swap="innerHTML">
+                    Relative_date_pattern
+                </label><br>
+            </div>
+        </form>
+    </div>
+    <div id="single_recurrence_container">
+
+    </div>
+</div>

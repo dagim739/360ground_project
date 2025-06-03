@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 16% 84%;
+    grid-auto-rows: minmax(100vh, auto);
+}
+
+
+#body {
+    height: 67vh;
+    overflow: scroll;
+}
+
+
+#sidebar{
+    background-color: rgb(30, 76, 129);
+    display:grid;
+    grid-template-rows: 8% 92%;
+}
+
+
+
+#sidebar-navigation ul li:hover a{
+    padding-left: 40px;
+}
+
+#sidebar-navigation ul li:hover{
+    background-color:rgb(9, 61, 120);
+}
+
+#sidebar-navigation ul li a{
+    transition: .2s;
+    padding-left: 15px;
+}
+
+
+#sidebar-navigation ul li a:hover{
+    text-decoration: underline;
+}
+
+#sidebar-navigation ul li a:focus{
+    padding-left: 40px;
+}
+
+#sidebar-navigation ul li a i{
+    margin-right: 10px;
+}
+
+#sidebar-navigation ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+#content{
+    background-color: rgb(237, 229, 229);
+    color: rgb(71, 71, 71);
+    padding: 0.5rem;
+}
+
+li{
+    display:block;
+    padding-top: 14.24px;
+    padding-bottom: 14.24px;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#clinic-name h1{
+    color: white;
+    font-weight:400;
+    font-size:1.3rem;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+
+
+#profile-container button {
+    height: 40px;
+    padding: 0%;
+    width: 30%;
+    color: white;
+    background-color: rgb(30, 76, 129);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    margin-top: 2%;
+    margin-left: 34%;
+}
+
+
+#profile-container button:hover {
+    background-color:rgb(9, 61, 120);
+}
+
+
+
+div#profile-container {
+    margin-top: 10%;
+}
+
+
+
+#profile-container div input {
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(71, 71, 71);
+    color: rgb(70, 70, 70);
+}
+
+
+#profile-container #changeusername div{
+    margin-bottom:1%;
+}
+
+
+#profile-container #submit {
+    color: white;
+    background-color: rgb(30, 76, 129);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+
+#profile-container #submit:hover{
+    background-color:rgb(9, 61, 120);
+}
+
+#profile-container .error {
+    font-size: 12px;
+    color: rgb(255, 64, 0);
+}
+
+#profile-container #changepassword div{
+    margin-bottom:1%;
+}
+
+
+
+
+#profile-container .changeusernameorpassword {
+    width: 50%;
+    margin-left: 24.5%;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+
+
+#profile-container-form {
+    border: none;
+}
+
+
+
+
+#profile-container form #submit {
+    margin-top: 3%;
+    height: 9%;
+    width: 36%;
+    margin-left: 64%;
+}
+
+
+#profile-container #submit {
+    color: white;
+    background-color: rgb(30, 76, 129);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+
+
+
+
+#profile-container button:hover {
+    background-color:rgb(9, 61, 120);
+}
+
+
+
+
+#profile-container #submit:hover{
+    background-color:rgb(9, 61, 120);
+}
+
+
+
+
+#event_adding_button {
+    position: fixed;
+    width: 18%;
+    color: white;
+    background-color: rgba(30, 76, 129, 0.66);
+    border: none;
+    border-radius: 4px;
+    margin-left: 32%;
+    height: 25px;
+    margin-top: -2%;  
+}
+
+
+
+#event_adding_button:hover {
+    background-color:rgb(30, 76, 129);
+}
+
+
+
+#choosing-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+#choosing-form div {
+    margin-left: 35%;
+}
+
+
+
+
+#one_time_event_form_container {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 2%;
+}
+
+
+
+#onetimeeventheader {
+    font-size: 1rem;
+    margin-bottom: 1%;
+}
+
+
+
+#eventnamecontainer {
+    margin-bottom: 1%;
+}
+
+
+
+#eventname {
+    width: 73.5%;
+    font-size: 0.8rem;
+    padding: 0.5%;
+    border-radius: 3px;
+    border: 1px solid black;
+    color: rgb(71, 71, 71);
+}
+
+
+
+
+#dateinput {
+    width: 26%;
+    font-size: 0.8rem;
+    padding: 0.5%;
+    border-radius: 3px;
+    border: 1px solid black;
+    color: rgb(71, 71, 71);
+}
+
+
+
+#event-description {
+    width: 73.5%;
+    padding: 0.5%;
+    height: 11rem;
+    color: rgb(71, 71, 71);
+    font-size: 0.8rem;
+}
+
+
+
+#addeventpost {
+    width: 19%;
+    color: white;
+    background-color: rgb(30, 76, 129);
+    border: NONE;
+    border-radius: 4px;
+    margin-left: 81%;
+    margin-top: 2%;
+    height: 25px;
+}
+
+
+
+#event-status-container {
+    margin-bottom: 1%;
+}
+
+
+
+#event-status {
+    text-decoration: underline;
+    margin-left: 42%;
+}
+
+
+
+
+
+#event_form_container {
+  margin-top: 0.5%;
+}
+
+
+
+#event-status-error {
+  margin-left: 43%;
+  color: #ff3000;
+  font-size: 0.8rem;
+  margin-top: 0.2%;
+}
+
+
+
+
+#event-name-error {
+  margin-left: 43%;
+  color: #ff3000;
+  font-size: 0.8rem;
+  margin-top: 0.2%;
+}
+
+
+
+#one_time_event_additon_successful {
+  margin-left: 30%;
+  margin-top: 6%;
+  font-size: 2rem;
+  color: green;
+}
+
+
+
+#events_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    margin-top: 2%;
+}
+
+
+
+.events {
+    background-color: rgba(25, 132, 255, 0.54);
+    color: white;
+    padding-left: 5%;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+
+.events:hover {
+    transform: scale(1.04);
+}
+
+
+
+
+.events {
+    position: relative;
+}
+
+
+.event-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    pointer-events: none;  /* prevents hidden icons from being clickable */
+    transition: opacity 0.3s ease;
+}
+
+.events:hover .event-actions {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.edit-btn,
+.delete-btn {
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: #eee;
+}
+
+
+
+
+
+#recurrence-choosing-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
+
+#recurrence-choosing-form div {
+    margin-left:12%;
+}
+
+
+
+
+#single_recurrence_container {
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 4px;
+  padding: 1%;
+  width: 70%;
+  margin-top: 2%;
+  margin-left: 14%;
+}
+
+
+
+#addeventspecificrecurrence {
+  width: 18%;
+  color: white;
+  background-color: rgba(30, 76, 129, 0.66);
+  border: none;
+  border-radius: 4px;
+  margin-left: 77%;
+  height: 25px;
+  margin-top: 1%;
+}
+
+
+
+
+#error {
+  color: #ff4800;
+  font-size: 0.9em;
+}
+
+
+
+
+#days_of_week {
+  margin-top: 1%;
+}
+
+
+
+#nb {
+  color: green;
+}
+
+
+
+
+#eventname-recurring-event {
+    width: 100%;
+}
+
+
+
+
+#event-description-recurring-event {
+  width: 100%;
+  padding: 0.5%;
+  height: 11rem;
+  color: rgb(71, 71, 71);
+  font-size: 0.8rem;
+}
+
+
+
+
+#eventname-recurring-event {
+  width: 100%;
+  padding: 0.5%;
+}
+
+
+
+
+#message {
+  color: green;
+  font-size: 0.8rem;
+  margin-left: 45%;
+  text-decoration: underline;
+}
+
+
+
+
+
+#registration-container {
+  width: 50%;
+  padding: 1%;
+}
+
+
+
+
+#registration-container label {
+  color: white;
+}
+
+
+
+#firstname {
+  width: 100%;
+  background: transparent;
+  border: 1px solid white;
+  padding: 1%;
+  border-radius: 4px;
+}
+
+
+
+#lastname {
+  width: 100%;
+  background: transparent;
+  border: 1px solid white;
+  padding: 1%;
+  border-radius: 4px;
+}
+
+
+
+#username {
+  width: 100%;
+  background: transparent;
+  border: 1px solid white;
+  padding: 1%;
+  border-radius: 4px;
+}
+
+
+
+
+#password {
+  width: 100%;
+  background: transparent;
+  border: 1px solid white;
+  padding: 1%;
+  border-radius: 4px;
+}
+
+
+
+
+#email {
+  width: 100%;
+  background: transparent;
+  border: 1px solid white;
+  padding: 1%;
+  border-radius: 4px;
+}
+
+
+
+#registration-container div {
+  margin-bottom: 0.5%;
+}
+
+
+
+#register {
+  color: white;
+  background-color: #0000;
+  border: none;
+  width: 20%;
+  margin-left: 20%;
+}

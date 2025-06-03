@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="{% static 'js/_360groundproject.js' %}"></script>
+</head>
+<body>
+    <h1>360 ET. Calendar</h1>
+    <section id="logindiv" class="wrapper">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h2>Login</h2>
+            <div class="input-box">
+                <input type="text" name="username" id="username" value="{{ error.username }}" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+                <p id="errorusername">{{ error.erroruser }}</p>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" id="password" value="{{ error.password }}" placeholder="Password" required>
+                <i class='bx bxs-lock'></i>
+                <p id="errorpassword">{{ error.errorpass }}</p>
+            </div>
+
+            <div>
+                <button class="btn" type="submit">Login</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

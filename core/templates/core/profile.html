@@ -1,0 +1,19 @@
+<div id="profile-container">
+    <div>
+        <button hx-target="#profile-container" hx-trigger="click" hx-swap="innerHTML" hx-get="{% url 'changeusername' %}">
+            Change Username 
+        </button>
+    </div>
+
+    <div>
+        <button hx-target="#profile-container" hx-trigger="click" hx-swap="innerHTML" hx-get="{% url 'changepassword' %}">
+            Change Password
+        </button>
+    </div>
+
+    <div>
+        <form action="{% url 'logout' %}" method="GET" id="profile-container-form">
+            <button type="submit" value="Logout" name="submit" id="logout">Log out</button>
+        </form>
+    </div>
+</div>

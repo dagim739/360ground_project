@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(30, 76, 129);
+    padding: 20px;
+}
+
+.wrapper {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 420px; /* Maintain maximum width */
+    background: transparent;
+    color: #fff;
+    border-radius: 0px;
+    padding: 20px 30px;
+}
+
+h2 {
+    font-size: 24px; /* Slightly smaller for better scaling */
+    text-align: center;
+    font-weight: 150;
+}
+
+h1 {
+    font-size: 28px; /* Adjust heading size for small screens */
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0; /* Reduce margin for smaller screens */
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.294);
+    border-radius: 0px;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 45px 15px 15px; /* Adjust padding */
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px; /* Adjust spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .btn {
+    width: 100%; /* Full width on small screens */
+    max-width: 200px; /* Limit width */
+    height: 45px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    margin: 20px auto;
+    display: block;
+}
+
+select {
+    width: 100%;
+    color: #fff;
+    background-color: rgb(30, 76, 129);
+    border: 2px solid rgba(255, 255, 255, 0.294);
+    padding: 8px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+p {
+    color: rgb(1, 35, 73);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: rgb(2, 123, 142);
+    color: #ffffff;
+}
+
+span {
+    font-size: 28px; /* Adjust for small screens */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .wrapper {
+        padding: 15px 20px;
+    }
+
+    .btn {
+        max-width: 100%; /* Ensure buttons are scalable */
+    }
+}
+
+@media (max-width: 480px) {
+    h2, h1 {
+        font-size: 20px;
+    }
+
+    .input-box input {
+        padding: 10px 35px 10px 10px;
+    }
+
+    .input-box i {
+        right: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}

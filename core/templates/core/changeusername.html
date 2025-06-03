@@ -1,0 +1,21 @@
+<div id="changeusername">
+    <form action="#" class="changeusernameorpassword">
+        {% csrf_token %}
+        <div id="prevpasswordcontainer">
+            <input type="text" name="prevpassword" placeholder="Enter previous password" id="prevpassword" value="{{ data.prevpassword }}">
+            <p class="error">{{ data.prevpassworderror }}</p>
+        </div>
+
+        <div id="prevusernamecontainer">
+            <input type="text" name="prevusername" placeholder="Enter previous username" id="prevusername" value="{{ data.prevusername }}">
+            <p class="error">{{ data.prevusernameerror }}</p>
+        </div>
+
+        <div id="newusernamecontainer">
+            <input type="text" name="newusername" placeholder="Enter new username" id="newusername" value="{{ data.newusername }}">
+            <p class="error">{{ data.newusernameerror }}</p>
+        </div>
+        <input type="hidden" value="{{ data.id }}">
+        <input type="submit" value="submit" id="submit" hx-target="#profile-container" hx-trigger="click" hx-swap="innerHTML" hx-post="{% url 'changeusername' %}">
+    </form>
+</div>
