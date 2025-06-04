@@ -83,8 +83,6 @@ A modern, lightweight event management system built with **Django** (backend), *
 | `make start`           | Start the app at `localhost:8000` |
 | `make stop`            | Stop the app                      |
 | `make migrate`         | Run database migrations           |
-| `make createsuperuser` | Create an admin user              |
-| `make shell`           | Open bash shell in container      |
 
 
 ## Features
