@@ -39,6 +39,11 @@ A modern, lightweight event management system built with **Django** (backend), *
     ```bash
     make stop
 
+3. Registration:
+   ```bash
+   You must start the project from `localhost:8000/register/`.
+   This is because you must register before loging in and using the app
+
 
 
 
