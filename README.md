@@ -15,7 +15,7 @@ A modern, lightweight event management system built with **Django** (backend), *
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/dagim739/360groundproject.git
+   git clone https://github.com/dagim739/360ground_project.git
    cd 360groundproject
 
 
